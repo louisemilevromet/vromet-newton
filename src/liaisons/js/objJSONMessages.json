@@ -1,0 +1,57 @@
+{
+  "nom": {
+    "vide": "Vous devez entrer votre nom de famille.",
+    "pattern": "Pour le nom de famille, les accents français, les espaces, les tirets et les apostrophes sont permis."
+  },
+  "prenom": {
+    "vide": "Vous devez entrer votre prénom.",
+    "pattern": "Pour le prénom, les accents français, les espaces, les tirets et les apostrophes sont permis."
+  },
+  "identite": {
+    "vide": "Vous devez entrer votre identité."
+  },
+  "naissance": {
+    "vide": "Vous devez entrer une date de naissance.",
+    "pattern": "Entrez une date de naissance valide."
+  },
+  "province": {
+    "vide": "Vous devez entrer une province."
+  },
+  "adresse": {
+    "vide": "Vous devez entrer une adresse.",
+    "pattern": "Pour l'adresse, les accents français, les espaces, les tirets et les apostrophes sont permis."
+  },
+  "montantDonM": {
+    "vide": "Vous devez choisir un montant de don mensuel."
+  },
+  "montantDonU": {
+    "vide": "Vous devez choisir un montant de don unique."
+  },
+  "nomTitulaire": {
+    "vide": "Vous devez entrer le nom du titulaire de la carte.",
+    "pattern": "Vous devez entrer un nom de titulaire valide."
+  },
+  "numeroCarte": {
+    "vide": "Vous devez entrer un numéro de carte.",
+    "pattern": "Le numéro de carte doit comporter 16 chiffres."
+  },
+  "dateCarte": {
+    "vide": "Vous devez entrer une date d'expiration pour votre carte.",
+    "pattern": "La date de carte doit être au format MM/AA."
+  },
+  "cvcCarte": {
+    "vide": "Vous devez entrer le CVC de votre carte.",
+    "pattern": "Le CVC doit comporter 3 chiffres."
+  },
+  "typeCompte": {
+    "vide": "Vous devez choisir un type de compte."
+  },
+  "numeroCompte": {
+    "vide": "Vous devez entrer votre numéro de compte.",
+    "pattern": "Le numéro de compte doit comporter 10 chiffres."
+  },
+  "numeroTransit": {
+    "vide": "Vous devez entrer votre numéro de transit.",
+    "pattern": "Le numéro de transit doit comporter 5 chiffres."
+  }
+}

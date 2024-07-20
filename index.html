@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon formulaire de don</title>
+    <link rel="stylesheet" href="src/liaisons/css/styles.css" />
+
+    <link
+      href="https://db.onlinewebfonts.com/c/b47ec335a46da8f213fd2d1eec203601?family=Artico+Expanded+Bold"
+      rel="stylesheet"
+    />
+    <script defer type="module" src="src/liaisons/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="container_nav">
+          <div class="container_logo">
+            <img
+              class="logo"
+              alt="image logo"
+              src="src/liaisons/images/newton.png"
+            />
+          </div>
+          <div class="container_right">
+            <div class="container_connection">
+              <div class="btn_login">
+                <p class="login">LOG IN</p>
+              </div>
+              <div class="btn_signup">
+                <p class="signup">SIGN UP</p>
+              </div>
+            </div>
+            <div class="hamburger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h2 class="main_message">Faites un don pour soutenir notre cause</h2>
+      <p class="second_message">
+        Chaque geste compte dans la construction d'un monde meilleur. Notre
+        organisation caritative s'engage passionnément à créer un impact positif
+        dans la vie des personnes les plus vulnérables. Les dons que nous
+        recevons jouent un rôle essentiel dans la réalisation de notre mission.
+      </p>
+      <div class="container_debuter">
+        <a id="btn_debuter" class="btn_debuter">Débuter</a>
+      </div>
+      <hr />
+      <div class="container_stepLeft">
+        <!-- progressbar -->
+        <ul id="progressbar">
+          <li class="active">Informations</li>
+          <li>Don</li>
+          <li>Paiement</li>
+        </ul>
+      </div>
+      <div class="container_formSection1">
+        <h2 id="monH2" class="h2_sections">Mes informations</h2>
+        <form id="monForm" novalidate>
+          <div class="container_AllInput">
+            <div class="container_input">
+              <label class="nom" for="nom">Nom <span>*</span></label>
+              <span id="nomErreur"></span>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                required
+                aria-labelledby="nomLabel"
+              />
+            </div>
+            <div class="container_input">
+              <label class="prenom" for="prenom">Prénom <span>*</span></label>
+              <span id="prenomErreur"></span>
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                required
+                aria-labelledby="prenomLabel"
+              />
+            </div>
+            <div class="container_input">
+              <label class="identite" for="identite"
+                >Identité <span>*</span></label
+              >
+              <span id="identiteErreur"></span>
+              <select
+                id="identite"
+                name="identite"
+                required
+                aria-labelledby="identiteLabel"
+              >
+                <option value="">Veuillez choisir une identité</option>
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+              </select>
+            </div>
+            <div class="container_input">
+              <label class="naissance" for="naissance"
+                >Date de naissance <span>*</span></label
+              >
+              <span id="naissanceErreur"></span>
+              <input
+                type="date"
+                id="naissance"
+                name="naissance"
+                required
+                aria-labelledby="naissanceLabel"
+              />
+            </div>
+            <div class="container_input">
+              <label class="province" for="province"
+                >Province <span>*</span></label
+              >
+              <span id="provinceErreur"></span>
+              <select
+                id="province"
+                name="province"
+                required
+                aria-labelledby="provinceLabel"
+              >
+                <option value="">Veuillez choisir une province</option>
+                <option value="AB">Alberta</option>
+                <option value="BC">Colombie-Britannique</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">Nouveau-Brunswick</option>
+                <option value="NL">Terre-Neuve-et-Labrador</option>
+                <option value="NS">Nouvelle-Écosse</option>
+                <option value="NT">Territoires du Nord-Ouest</option>
+                <option value="NU">Nunavut</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Île-du-Prince-Édouard</option>
+                <option value="QC">Québec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="YT">Yukon</option>
+              </select>
+            </div>
+            <div class="container_input">
+              <label class="adresse" for="adresse"
+                >Adresse <span>*</span></label
+              >
+              <span id="adresseErreur"></span>
+              <input
+                type="text"
+                id="adresse"
+                name="adresse"
+                required
+                aria-labelledby="adresseLabel"
+              />
+            </div>
+          </div>
+          <fieldset>
+            <input type="button" class="next action-button" value="Suivant" />
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="container_formSection2">
+        <h2 class="h2_sections">Type de don</h2>
+        <form>
+          <div class="container_dons">
+            <input
+              checked="checked"
+              type="radio"
+              name="type_dons"
+              id="donMensuel"
+            />
+            <label for="donMensuel" class="type_dons" id="donM">
+              <p>Don Mensuel</p>
+            </label>
+            <input type="radio" name="type_dons" id="donUnique" />
+            <label for="donUnique" class="type_dons" id="donU">
+              <p>Don Unique</p>
+            </label>
+          </div>
+          <div class="container_donMensuel">
+            <h3 class="message_don">
+              Les dons mensuels sont le moyen le plus efficace de faire un don
+            </h3>
+            <span class="donErreurM"></span>
+            <div class="container_montants_don">
+              <input type="radio" name="selectM" />
+              <label class="dons">
+                <p>25 $/mois</p>
+              </label>
+              <input type="radio" name="selectM" />
+              <label class="dons">
+                <p>35 $/mois</p>
+              </label>
+              <input type="radio" name="selectM" />
+              <label class="dons">
+                <p>45 $/mois</p>
+              </label>
+              <input type="radio" name="selectM" />
+              <label class="dons">
+                <p>50 $/mois</p>
+              </label>
+              <input type="radio" name="selectM" />
+              <label class="dons">
+                <p>75 $/mois</p>
+              </label>
+              <input type="radio" name="selectM" />
+              <label class="dons">
+                <p>100 $/mois</p>
+              </label>
+            </div>
+            <div class="container_autreMontant">
+              <label for="donA"
+                >Autre montant <span>* pas fonctionnel</span></label
+              >
+              <input type="text" name="donAutre" />
+            </div>
+          </div>
+          <div class="container_donUnique">
+            <h3 class="message_don">
+              La plupart des donateurs donnent actuellement 45 $ ou plus
+            </h3>
+            <span class="donErreurU"></span>
+            <div class="container_montants_don">
+              <input type="radio" name="selectU" checked />
+              <label class="dons">
+                <p>25 $</p>
+              </label>
+              <input type="radio" name="selectU" />
+              <label class="dons">
+                <p>35 $</p>
+              </label>
+              <input type="radio" name="selectU" />
+              <label class="dons">
+                <p>45 $</p>
+              </label>
+              <input type="radio" name="selectU" />
+              <label class="dons">
+                <p>50 $</p>
+              </label>
+              <input type="radio" name="selectU" />
+              <label class="dons">
+                <p>75 $</p>
+              </label>
+              <input type="radio" name="selectU" />
+              <label class="dons">
+                <p>100 $</p>
+              </label>
+            </div>
+            <div class="container_autreMontant">
+              <label for="donA"
+                >Autre montant <span>* pas fonctionnel</span></label
+              >
+              <input type="text" name="donAutre" />
+            </div>
+          </div>
+        </form>
+        <fieldset>
+          <input type="button" class="next action-button" value="Suivant" />
+        </fieldset>
+      </div>
+      <div class="container_formSection3">
+        <h2 class="h2_sections">Choisissez votre mode de paiement</h2>
+        <form>
+          <div class="container_paiement">
+            <input
+              checked="checked"
+              type="radio"
+              name="type_paiement"
+              id="paiementCredit"
+              required
+            />
+            <label for="paiementCredit" class="type_paiement" id="paiementC">
+              <p>Carte de crédit</p>
+            </label>
+            <input type="radio" name="type_paiement" id="paiementBanque" />
+            <label for="paiementBanque" class="type_paiement" id="paiementB">
+              <p>Compte bancaire</p>
+            </label>
+          </div>
+          <div class="container_paiementCredit">
+            <div class="container_input">
+              <label class="nomTitulaire" for="nomTitulaire"
+                >Nom du titulaire de la carte <span>*</span></label
+              >
+              <span id="nomTitulaireErreur"></span>
+              <input
+                type="text"
+                id="nomTitulaire"
+                name="nomTitulaire"
+                required
+              />
+            </div>
+            <div class="container_input">
+              <label class="numeroCarte" for="numeroCarte"
+                >Numéro de la carte <span>*</span></label
+              >
+              <span id="numeroCarteErreur"></span>
+              <input type="text" id="numeroCarte" name="numeroCarte" required />
+            </div>
+            <div class="container_input">
+              <label class="dateCarte" for="dateCarte"
+                >MM/AA <span>*</span></label
+              >
+              <span id="dateCarteErreur"></span>
+              <input type="text" id="dateCarte" name="dateCarte" required />
+            </div>
+            <div class="container_input">
+              <label class="cvcCarte" for="cvcCarte">CVC <span>*</span></label>
+              <span id="cvcErreur"></span>
+              <input type="text" id="cvcCarte" name="cvcCarte" required />
+            </div>
+          </div>
+          <div class="container_paiementBanque">
+            <div class="container_input">
+              <label class="typeCompte" for="typeCompte"
+                >Type de compte <span>*</span></label
+              >
+              <span id="typeCompteErreur"></span>
+              <select id="typeCompte" name="typeCompte" required>
+                <option value="">Veuillez choisir un type de compte</option>
+                <option value="cheque">Chèque</option>
+                <option value="epargne">Épargne</option>
+              </select>
+            </div>
+            <div class="container_input">
+              <label class="numeroCompte" for="numeroCompte"
+                >Numéro de compte <span>*</span></label
+              >
+              <span id="numeroCompteErreur"></span>
+              <input
+                type="text"
+                id="numeroCompte"
+                name="numeroCompte"
+                required
+              />
+            </div>
+            <div class="container_input">
+              <label class="numeroTransit" for="numeroTransit"
+                >Numéro de transit et de banque <span>*</span></label
+              >
+              <span id="numeroTransitErreur"></span>
+              <input
+                type="text"
+                id="numeroTransit"
+                name="numeroTransit"
+                required
+              />
+            </div>
+          </div>
+        </form>
+        <fieldset>
+          <input type="submit" class="next action-button" value="Envoyer" />
+        </fieldset>
+      </div>
+    </main>
+  </body>
+</html>
